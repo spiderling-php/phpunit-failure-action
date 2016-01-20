@@ -14,6 +14,9 @@ trait FailureActionTrait
      */
     private $failureActions = [];
 
+    /**
+     * @param callable $callback
+     */
     public function addFailureAction(callable $callback)
     {
         $this->failureActions []= $callback;
@@ -21,6 +24,9 @@ trait FailureActionTrait
         return $this;
     }
 
+    /**
+     * @return callable[]
+     */
     public function getFailureActions()
     {
         return $this->failureActions;

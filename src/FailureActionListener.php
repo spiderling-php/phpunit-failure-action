@@ -13,6 +13,11 @@ use PHPUnit_Framework_AssertionFailedError;
  */
 class FailureActionListener extends PHPUnit_Framework_BaseTestListener
 {
+    /**
+     * @param PHPUnit_Framework_Test                 $test
+     * @param PHPUnit_Framework_AssertionFailedError $eception
+     * @param string                                 $time
+     */
     public function addFailure(
         PHPUnit_Framework_Test $test,
         PHPUnit_Framework_AssertionFailedError $eception,
@@ -25,6 +30,10 @@ class FailureActionListener extends PHPUnit_Framework_BaseTestListener
         }
     }
 
+    /**
+     * @param  PHPUnit_Framework_Test $test
+     * @return string
+     */
     public function getUniqueName(PHPUnit_Framework_Test $test)
     {
         return str_replace('\\', '_', get_class($test)).'::'.$test->getName();
