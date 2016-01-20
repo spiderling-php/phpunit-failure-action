@@ -1,0 +1,22 @@
+{
+    "name": "spiderling-php/phpunit-failure-action",
+    "description": "Perform an action on phpunit test failure",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Ivan Kerin",
+            "email": "ikerin@gmail.com",
+            "role": "Author"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SP\\Phpunit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SP\\Phpunit\\Test\\": "tests/src/"
+        }
+    }
+}
